@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.myapplication.ui.startScreen.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_charactersListUiFragment"
+            app:destination="@id/charactersListUiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterItemFragment"
+        android:name="com.example.myapplication.ui.characters.charatersItem.CharacterItemFragment"
+        android:label="fragment_character_item"
+        tools:layout="@layout/fragment_character_item" />
+    <fragment
+        android:id="@+id/charactersListUiFragment"
+        android:name="com.example.myapplication.ui.characters.list.CharactersListUiFragment"
+        android:label="fragment_characters_list_ui"
+        tools:layout="@layout/fragment_characters_list_ui" >
+        <action
+            android:id="@+id/action_charactersListUiFragment_to_characterItemFragment"
+            app:destination="@id/characterItemFragment" />
+    </fragment>
+</navigation>
