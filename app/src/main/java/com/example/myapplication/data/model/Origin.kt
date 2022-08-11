@@ -1,6 +1,6 @@
 package com.example.myapplication.data.model
 
-data class Test(
+data class Origin(
     val name: String,
-    val species: String
+    val url: String
 )
